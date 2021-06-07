@@ -1,0 +1,227 @@
+
+	*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	}
+	body
+	{
+
+	font-family: Arial, Helvetica,"Times New Roman", sans-serif;
+
+	}
+
+
+
+.container
+{
+position: relative;
+margin: 0;
+padding: 0;
+width: 100%;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.carousel-indicators
+{
+
+position: absolute;
+bottom: -8px;
+
+}
+
+
+
+
+
+
+	
+
+.card-container
+{
+
+position: relative;
+margin-top: 50px;
+margin-left: 20px;
+margin-right: 20px;
+}
+/* sort by */
+
+
+.heading-of-listing
+{
+position: relative;
+margin-left: 20px;
+
+}
+.sort-by-choice
+{
+ position: absolute;
+ right: 30px;
+ top: 0px;
+ border: 1px solid grey;
+ border-radius: 4px;
+ padding: 5px 50px;
+
+
+}
+
+
+
+
+
+
+	/* heart like */
+	.fa-heart-o {
+	color: red;
+
+	}
+
+	.fa-heart {
+	color: red;
+	
+	}
+	/* heart like end */
+
+
+	.card-wrapper
+	{
+
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction:column;
+
+
+	}
+
+	.main-card
+	{
+	position: relative;
+	cursor: pointer;
+	border: 1px solid #BFBFBF;
+	border-radius: 8px;
+	background-color: white; 
+	margin: 20px;
+	
+	}
+
+	.card-image
+	{
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+	}
+	.title-of-the-book
+	{
+
+	font-size: 20px;
+	font-weight: 600;
+	margin: 1px;
+	}
+	.author
+	{ 
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 3px;
+	margin-bottom: 15px;
+	}
+	.rupees
+	{
+   position: relative;
+	margin: 3px;
+	bottom: 7px;
+	}
+
+	.fa-heart-o,.fa-heart
+	{
+	position: absolute;
+	right:100px;
+	bottom: 7px;
+	}
+	.main-card input[type="button"]
+	{
+		
+	color: white;
+	width: 80px;
+	border:2px solid #004D99;
+	border-radius: 5px;
+	background-color: #004D99;
+	font-size: 15px;
+	position: absolute;
+	right:10px;
+	bottom: 7px;
+
+
+	}
+
+.view-more-bookbtn
+{
+   position: relative;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+
+
+
+}
+
+
+	.view-more-bookbtn input[type="button"]
+	{
+	position: relative;
+	cursor: pointer;
+	color: white;
+	border:2px solid #004D99;
+	border-radius: 8px;
+	background-color: #004D99;
+	font-size: 15px;
+	margin-top: 50px;
+	padding: 10px 70px;
+	margin-bottom: 50px;
+	 
+
+	  
+
+	}
+	footer
+	{
+
+		background-color: #FFA417;
+	}
+
+	/* end of listing
+	*/
+
+
+
+	/*  start meadia query */
+
+
+
+	@media screen and (min-width: 700px) {
+	.card-wrapper
+	{
+
+
+	flex-direction:row;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+
+
+	}
+
+	}
+
+	
+/* 
+	sorting button based on choice
+
+ */
+ 

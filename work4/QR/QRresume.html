@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume QR code</title>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+    <div class="container-fluid px-1 px-md-2 px-lg-4 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-sm-11 mx-5">
+                <div class="card border-0">
+                    <div class="row justify-content-center">
+                        <h3 class="mb-4"><img class="image" src="QRlogo.jpg">esume QR Code Gentraor </h3>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-sm-7 border-line pb-3">
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Name</p> <input  type="text" placeholder="Enter your full Name" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Registration-no </p> <input type="text" placeholder="RA1711xxxx" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">DOB</p> <input type="text" placeholder="03/05/1999" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Email </p> <input  type="text" placeholder="xyz@gmail.com" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Father's name</p> <input  type="text" placeholder="Father name" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Mobile-no</p> <input type="text" placeholder="876533xxxx" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Course </p> <input  type="text" placeholder="B.tech/M.tech..." onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Specialization</p> <input  type="text" placeholder="IT/CSE/..." onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+
+
+                             <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Institute/college</p> <input  type="text" placeholder="Institute name" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                             <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Graduation %</p> <input  type="text" placeholder="%" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Year of passing</p> <input  type="text" placeholder="20..." onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                             <div class="form-group">
+                                <p class="text-muted text-sm mb-0">skills </p> <input  type="text" placeholder="c,c++,java," onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Certification</p> <input type="text" placeholder="paste link here" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Area of intrest</p> <input  type="text" placeholder="..." onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                             <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Extracurricular activity</p> <input  type="text" placeholder="..." onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            
+                         
+                            <div class="form-group">
+                                <p class="text-muted text-sm mb-0">Other information</p> <input type="text" placeholder="write down here">
+                            </div>
+
+
+                            <button onclick="generateQRCode()" class="btn btn-red text-center">Generate QR Code</button>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="col-sm-5 text-center justify-content-center pt-4 pb-4">
+
+                            <div class="row justify-content-sm-center">
+                                <canvas id="qr-code"></canvas><br>  
+                            </div>
+
+
+
+
+                          
+                            <table>
+
+                                <tr>
+                                  <td>name</td>
+                                  <td class="show"></td>
+                                  
+                                </tr>
+
+                                <tr>
+                                  <td>Registration-no</td>
+                                  <td class="show"></td>
+                                 
+                                </tr>
+                                <tr>
+                                  <td>DOB</td>
+                                  <td class="show"></td>
+                                
+                                </tr>
+                                <tr>
+                                  <td>Email</td>
+                                  <td class="show"></td>
+                                
+                                </tr>
+                                <tr>
+                                  <td>Father's name</td>
+                                  <td class="show"></td>
+                                
+                                </tr>
+                                <tr>
+                                  <td>Mobile-no</td>
+                                  <td class="show"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <td>Course</td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+
+                                  <tr>
+                                  <td>Specialization</td>
+                                  <td class="show"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <td>Graduation %</td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td>Year of passing</td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+
+                                  <tr>
+                                    <td>skills</td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+
+                                  <tr>
+                                    <td>Certification</td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+
+
+
+                                  <tr>
+                                    <td>Extracurricular activity/td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+
+                             
+                                  <tr>
+                                    <td>Other information</td>
+                                    <td class="show"></td>
+                                    
+                                  </tr>
+                         
+                                                    
+                              </table>
+                            
+
+  
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+
+<style>
+
+
+td {
+ 
+ text-align: left;
+ padding: 8px;
+}
+
+
+
+
+
+
+
+ body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #24a0ed;
+    background-image: url(QRbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
+
+}
+ 
+.card {
+    padding: 30px 25px 5px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 2px #7c7777;
+    margin: auto;
+    vertical-align: middle;
+
+}
+ 
+.border-line {
+    border-right: 1px solid #BDBDBD
+}
+ 
+.text-sm {
+    font-size: 13px
+}
+ 
+.text-md {
+    font-size: 18px
+}
+ 
+.image {
+    width: 35px;
+}
+ 
+::placeholder {
+    color: grey;
+    opacity: 1
+}
+ 
+:-ms-input-placeholder {
+    color: grey
+}
+ 
+::-ms-input-placeholder {
+    color: grey
+}
+ 
+input {
+    padding: 2px 0px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500
+}
+ 
+#qr-code {
+    border: 1px solid gray;
+    border-radius:5px;
+    padding: 6px;
+    display: block;
+    margin:0 auto;
+}
+ 
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #24a0ed ;
+    outline-width: 0
+}
+ 
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+ 
+.btn-red {
+    background-color: #24a0ed ;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 2px solid #fff
+}
+ 
+.btn-red:hover {
+    box-shadow: 0 0 0 2px #00ff37
+}
+ 
+.btn-red:focus {
+    box-shadow: 0 0 0 2px #00ff37 !important
+}
+ 
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #00ff37
+}
+ 
+@media screen and (max-width: 575px) {
+    .border-line {
+        border-right: none;
+        border-bottom: 1px solid #EEEEEE
+    }
+}
+</style>
+
+
+
+<script>
+  var qr;
+            (function() {
+                    qr = new QRious({
+                    element: document.getElementById('qr-code'),
+                    size: 275,
+                    value: "qrtext"
+                });
+            })();
+             
+
+
+
+
+
+
+
+
+
+
+
+
+            function generateQRCode() {
+
+
+              
+                const s = $(".form-group input");
+             
+        
+
+              const show=$(".show");
+            show[0].innerHTML=s[0].value;
+            show[1].innerHTML=s[1].value;
+            show[2].innerHTML=s[2].value;
+            show[3].innerHTML=s[3].value;
+            show[4].innerHTML=s[4].value;
+            show[5].innerHTML=s[5].value;
+            show[6].innerHTML=s[6].value;
+            show[7].innerHTML=s[7].value;
+            show[8].innerHTML=s[8].value;
+            show[9].innerHTML=s[9].value;
+            show[10].innerHTML=s[10].value;
+            show[11].innerHTML=s[11].value; 
+            show[12].innerHTML=s[12].value;
+            show[13].innerHTML=s[13].value;
+       
+        
+       
+        
+        
+                
+
+   
+                 var qrtext ="name-> "+s[0].value+"         registration no-> "+s[1].value+"         DOB-> " +s[2].value+"           Email-> "+s[3].value+"             Father's name-> "+s[4].value+"        Mobile-no->"+s[5].value+"           Course-> "+s[6].value+"            Specialization->"+s[7].value+"         Institute/college->"+s[8].value+"            Graduation %-> "+s[9].value+"           Year of passing-> "+s[10].value+"         skills->"+s[11].value+"            Certification-> "+s[12].value+"         Area of intrest->"+s[13].value+"        Extracurricular activity->"+s[14].value+"           Other information->"+s[15].value+" ";
+               
+
+
+
+                qr.set({
+                    foreground: 'black',
+                    size: 275,
+                    value: qrtext
+                });
+            }
+</script>
+
+
+
+
+</body>
+</html>
